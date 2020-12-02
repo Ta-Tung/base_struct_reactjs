@@ -1,9 +1,8 @@
 /* eslint-disable prettier/prettier */
-import AsyncStorage from '@react-native-community/async-storage';
 import log from '../helper/log';
 
 const request = async (url, method, headers, body) => {
-  let token = await AsyncStorage.getItem('phuot-go-token');
+  let token = await localStorage.getItem('phuot-go-token');
   let configHeader = {
     Accept: 'application/json',
     'Content-Type': 'application/json',
